@@ -97,8 +97,7 @@ Type `exit` to quit.
 
 - **Re-indexing:** the index is built only if `chroma_db/` doesn't exist. If you add or
   change a PDF in `data/`, **delete `chroma_db/`** so it rebuilds with the new content.
-- **Model cache (optional):** the embedding model is downloaded on first run. To avoid
-  re-downloading it on every container, mount a cache volume:
-  `- hf_cache:/root/.cache/huggingface` (see `compose.yaml`).
+- **Model cache:** the embedding model is downloaded on the first run and cached in
+  `hf_cache/` (mounted at `/root/.cache/huggingface`), so it isn't re-downloaded on later runs.
 - **`qwen3:8b`** is a reasoning model; if answers include `<think>...</think>` blocks,
   add `/no_think` to the prompt or switch to `qwen2.5:7b` / `llama3.1:8b`.

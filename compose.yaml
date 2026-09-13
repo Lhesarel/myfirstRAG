@@ -12,5 +12,6 @@ services:
             OLLAMA_URL: "http://host.docker.internal:11434"
         volumes:
             - ./data:/app/data
+            - ./hf_cache:/root/.cache/huggingface
         stdin_open: true
         tty: true
