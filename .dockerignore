@@ -1,0 +1,7 @@
+# The RAG's .dockerignore file:
+
+.venv/
+__pycache__/
+chroma_db/
+git/
+.gitignore

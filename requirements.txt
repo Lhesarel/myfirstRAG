@@ -1,0 +1,11 @@
+﻿# The RAG's dependencies: 
+
+langchain==0.3.30
+langchain-chroma==0.2.6
+langchain-community==0.3.31
+langchain-huggingface==0.3.1
+langchain-ollama==0.3.10
+langchain-text-splitters==0.3.11
+chromadb==1.5.9
+sentence-transformers==5.1.2
+pypdf==6.18.1

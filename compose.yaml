@@ -1,0 +1,16 @@
+# The RAG's compose.yaml file:
+
+services:
+    rag:
+        build: .
+        image: myfirstrag
+        environment:
+            CHUNK_SIZE: 500
+            CHUNK_OVERLAP: 100
+            K: 4
+            TEMPERATURE: 0
+            OLLAMA_URL: "http://host.docker.internal:11434"
+        volumes:
+            - ./data:/app/data
+        stdin_open: true
+        tty: true
